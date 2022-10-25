@@ -1,0 +1,77 @@
+// VARIABLES
+
+// Height header
+$header-height: 8rem;
+$header-height-shrink : 5rem;
+
+// Define all variables (aside from colors) in this document. This includes breakpoint, sizes, etc.
+
+$black: #000;
+$dark-mode: #191c26;
+$dark-mode-secondary :#111319;
+$black-olive: #666666;
+$white: #fff;
+$silver: #ccc;
+$blue : #0bc3f7;
+$darkblue : #0781b4;
+$lightblue : #0bc3f7;
+$red : #c41820;
+
+
+$pigeon-post: #aec9de;
+$orange: #fe7d0a;
+$yellow : #ffba00;
+$green: #81c904;
+$lava: #cc1b25;
+$pigeon-post-light: rgba($pigeon-post, 0.75);
+$lightBlue:#4586c4;
+$darkBlue:#0d508b;
+
+// Gray
+$gray: #808080;
+$bg-gray: #e6e6e7;
+
+// Blue
+$blue: #115e67;
+$blue-powder: #c4d7e0;
+$blue-sky: #04649c;
+$sapphire-blue: #04649c;
+
+// Brand colors
+$primary-color: $red;
+$text-color: $black;
+
+// Link color
+$link-color: $primary-color;
+$link-color-hover: lighten($primary-color, 25%);
+
+// Button color
+$btn-color: $primary-color;
+$btn-color-hover: lighten($primary-color, 25%);
+
+// ------------------------------------------------------------
+// Breakpoint Variable
+
+// Mobile
+$mobileOnly: 767px;
+$mobilePortraitOnly: 479px;
+$mobilePortrait: 360px;
+$mobileLandScape: 480px;
+
+// Tablet
+$tablet: 768px;
+$tabletOnly: 1023px;
+
+// Desktop
+$desktop: 704px;
+$desktopWide: 960px;
+$desktopWideLarge: 1046px;
+$desktopSupperWide: 1140px;
+$desktopSupperWideLarge: 1530px;
+$middleTablet : 880px;
+
+// ------------------------------------------------------------
+// Font Variable
+
+$base-font-size: 16px;
+$base-line-height: 1.4;
