@@ -1,17 +1,24 @@
-import "./assets/css/_index.scss";
+import { Route } from "react-router-dom";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Header from "./components/header/Header";
+import "swiper/css/pagination";
+import "./assets/css/_index.scss";
+import Routes from "./components/config/Routes";
 import Footer from "./components/footer/Footer";
-import HeroSlider from "./components/heroSlider/HeroSlider";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <div className="app">
-      <Header />
-      <HeroSlider />
-      <Footer />
+      <Route
+        render={(props) => (
+          <>
+            <Header {...props} />
+            <Routes />
+            <Footer />
+          </>
+        )}
+      />
     </div>
   );
 }

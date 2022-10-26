@@ -7,7 +7,7 @@ $header-height-shrink : 5rem;
 // Define all variables (aside from colors) in this document. This includes breakpoint, sizes, etc.
 
 $black: #000;
-$dark-mode: #191c26;
+$dark-mode: #0f0f0f;
 $dark-mode-secondary :#111319;
 $black-olive: #666666;
 $white: #fff;
@@ -63,10 +63,10 @@ $tablet: 768px;
 $tabletOnly: 1023px;
 
 // Desktop
-$desktop: 704px;
-$desktopWide: 960px;
-$desktopWideLarge: 1046px;
-$desktopSupperWide: 1140px;
+$desktop: 992px;
+$desktopWide: 1024px;
+$desktopWideLarge: 1140px;
+$desktopSupperWide: 1440px;
 $desktopSupperWideLarge: 1530px;
 $middleTablet : 880px;
 

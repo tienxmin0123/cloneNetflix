@@ -15,6 +15,7 @@ $containerMediumWide: 1224px;
   @media (min-width: $tablet) {
     margin-left: $containerMarginTablet;
     margin-right: $containerMarginTablet;
+    padding: 0 1rem;
   }
 
   @media (min-width: $desktop) {
@@ -25,8 +26,9 @@ $containerMediumWide: 1224px;
   @media (min-width: $desktopWide) {
     max-width: $containerWide;
   }
-
+  
   @media (min-width: $desktopSupperWide) {
     max-width: $containerSuperWide;
+    padding: 0;
   }
 }
