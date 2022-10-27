@@ -1,0 +1,44 @@
+@import '../../assets//css/index';
+.category {
+  padding: 2rem 0;
+  background: $black;
+  &__header{
+    padding: 8rem;
+    &-title{
+      text-transform: capitalize;
+      font-size: 2rem;
+      font-weight: 500;
+      color: $white;
+      text-align: center;
+      transition: all .5s ease;
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+  &__list{
+    @include flex(unset , space-between);
+    flex-wrap: wrap;
+  }
+  & .card{
+    width: calc((100% / 5) - 15px);
+    margin: 0 0 1rem 0;
+  }
+  &__btn-more{
+    margin: 1rem 0 0 0;
+    color: $white;
+    text-align: center;
+    cursor: pointer;
+    &:hover span{
+      color: $red;
+      background: $white;
+    }
+    span{
+      transition: all .5s ease;
+      font-size: 1rem;
+      border: 1px solid $white ;
+      border-radius: 30px;
+      padding: .25rem 1rem;
+    }
+  }
+}

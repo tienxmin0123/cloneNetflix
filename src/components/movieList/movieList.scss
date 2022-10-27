@@ -1,0 +1,28 @@
+@import '../../assets//css/index';
+.movie{
+  padding: 2rem 0;
+  background: $black;
+  &__list{
+    margin: 1rem 0;
+  }
+  &__top{
+    @include flex(center, space-between);
+    margin: 0 0 1rem 0;
+  }
+  &__name{
+    margin: 0 0 1rem 0 ;
+    font-size: 2rem;
+    color: $white;
+  }
+  &__btn{
+    color : $white;
+    padding: .5rem 1rem;
+    border: 1px solid $white;
+    border-radius: 20px;
+    transition: all .5s ease;
+    &:hover{
+      background: $white;
+      color: $red;
+    }
+  }
+}

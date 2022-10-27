@@ -1,6 +1,6 @@
 import "./header.scss";
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logoHeader from "../../assets/images/Netflix_logo.svg";
 
 const headerNav = [
@@ -19,6 +19,8 @@ const headerNav = [
 ];
 export default function Header() {
   const headerRef = useRef(null);
+  const { pathname } = useLocation();
+  const indexLinks = headerNav.findIndex((x) => x.path === pathname);
   useEffect(() => {
     const shrinkHeader = () => {
       if (
@@ -52,7 +54,7 @@ export default function Header() {
             {headerNav.map((item, idx) => (
               <Link
                 className={`header__links ${
-                  item.display === headerNav[0].display ? "active" : ""
+                  indexLinks === idx ? "active" : ""
                 }`}
                 to={{
                   pathname: item.path,

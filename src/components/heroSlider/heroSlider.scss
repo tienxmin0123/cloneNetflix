@@ -1,8 +1,8 @@
 @import "../../assets/css/index";
 .hero-slider{
   &__item{
-    @include flex(center , space-between);
-    padding: 5rem;
+    @include flex(center , unset);
+    padding: 7rem;
     height: auto;
     width: 100%;
     position: relative;
@@ -12,7 +12,7 @@
     color: $white;
   }
   &__content{
-    width: 50%;
+    width: 70%;
     padding: 0 3rem;
     position: relative;
   }
@@ -54,7 +54,7 @@
     }
   }
   &__thumbnail{
-    width: auto;
+    width: 400px;
     img{
       display: block;
       width: 100%;

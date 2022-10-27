@@ -1,0 +1,5 @@
+@import '../../assets/css/index';
+.loading{
+  @include flex(center , center);
+  height: 100vh;
+}

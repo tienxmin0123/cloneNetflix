@@ -1,0 +1,45 @@
+@import '../../assets//css/index';
+.card{
+  position: relative;
+  height: 100%;
+  margin: 1rem 0;
+  transition: all .5s ease;
+  &__thumbnail{
+    img{
+      display: block;
+      border-radius: 20px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title{
+    color: $white;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    transition: all .5s ease;
+  }
+  &__btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .5s ease;
+    z-index: 10;
+    svg{
+      transition: all .5s ease;
+      font-size: 0px;
+      color: $red;
+    }
+  }
+  &:hover &__title{
+    color: $red;
+  }
+  &:hover &__btn{
+    opacity: 1;
+  }
+  &:hover &__btn svg{
+    font-size: 3rem;
+  }
+}

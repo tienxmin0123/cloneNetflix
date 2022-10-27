@@ -1,0 +1,34 @@
+@import '../../assets/css/index';
+.footer{
+  padding: 6rem 4rem;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__logo{
+    margin: 2rem auto;
+    width: 8rem;
+    img{
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &__wrap{
+    @include flex(center , center);
+  }
+  &__link{
+    width: calc((100% / 4) - 40px);
+    @include flex(unset , unset);
+    flex-direction: column;
+    &-item{
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      padding: .75rem 0;
+      color: $white;
+      transition: all .5s ease;
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../assets/css/index';
+.category{
+  &__search{
+    position: relative;
+    display: inline-block;
+    padding: 1rem 0;
+    &-input{
+      background-color: $dark-mode;
+      color: $white;
+      font-size: 1rem;
+      border-radius: 20px;
+      padding: .5rem 8rem .5rem 1.5rem;
+      outline: 0;
+      border: 0;
+    }
+    span{
+      position: absolute;
+      text-transform: capitalize;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      color: $white;
+      background: $red;
+      padding: .25rem 1.5rem;
+      border-radius: 30px;
+      box-shadow: 0px 0px 2px 4px $red;
+      transition: all .5s ease;
+      &:hover{
+      box-shadow: 0px 0px 3px 7px $red;
+      }
+    }
+  }
+}
