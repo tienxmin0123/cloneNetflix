@@ -10,11 +10,11 @@ const headerNav = [
   },
   {
     display: "Movies",
-    path: "/movie",
+    path: "/watch/movie",
   },
   {
     display: "TV Series",
-    path: "/tv",
+    path: "/watch/tv",
   },
 ];
 export default function Header() {
@@ -33,6 +33,7 @@ export default function Header() {
       }
     };
     window.addEventListener("scroll", shrinkHeader);
+    window.scrollTo(0, 0);
     return () => {
       window.removeEventListener("scroll", shrinkHeader);
     };

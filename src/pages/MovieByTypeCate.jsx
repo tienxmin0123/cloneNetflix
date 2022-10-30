@@ -17,6 +17,7 @@ export default function MovieByTypeCate() {
         dataMovie = await tmdbApi.getTvList(type, { params });
       }
       setMovieList(dataMovie.results);
+      window.scrollTo(0, 0);
     })();
   }, [category, type]);
   return (

@@ -8,7 +8,7 @@ export default function SearchMovie(props) {
   const [keyword, setKeyword] = useState(props.keyword ? props.keyword : "");
   const pushWord = useCallback(() => {
     if (keyword.trim().length > 0) {
-      history.push(`/${props.category}/search/${keyword}`);
+      history.push(`/watch/${props.category}/search/${keyword}`);
     }
   }, [keyword, history, props.category]);
 

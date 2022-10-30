@@ -1,0 +1,38 @@
+@import '../../assets/css/index';
+.actors{
+  padding: 6rem 0;
+  background: $black;
+  @include maxW($mobile){
+    padding: 4rem 0;
+  }
+  &__info{
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    color: $white;
+    @include maxW($mobile){
+      padding: 1rem 0;
+      font-size: 1rem;
+    }
+    span{
+      color: $red;
+      cursor: pointer;
+    }
+  }
+  &__list-movies{
+    @include flex(unset , unset);
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 -15px;
+    @include maxW($desktopSupperWide){
+      margin: 0 ;
+    }
+    & .card{
+      margin: 1rem 15px ;
+      width: calc((100% / 5) - 30px);
+      @include maxW($desktopWide){
+        margin: 1rem 5px ;
+        width: calc((100% / 5) - 10px);
+      }
+    }
+  }
+}

@@ -59,7 +59,7 @@ export default function HomePage() {
               <div className="movie__top">
                 <h2 className="movie__name">{item.name}</h2>
                 <Link
-                  to={`/${item.category}/type/${item.type}`}
+                  to={`/watch/${item.category}/type/${item.type}`}
                   className="movie__btn"
                 >
                   View more

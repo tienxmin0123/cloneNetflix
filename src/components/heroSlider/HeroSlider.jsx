@@ -75,7 +75,7 @@ export default function HeroSlider() {
                 <p className="hero-slider__desc">{movie.overview}</p>
                 <div className="hero-slider__btn">
                   <div
-                    onClick={() => history.push("/tv/" + movie.id)}
+                    onClick={() => history.push("/watch/tv/" + movie.id)}
                     className="hero-slider__links"
                   >
                     Watch now

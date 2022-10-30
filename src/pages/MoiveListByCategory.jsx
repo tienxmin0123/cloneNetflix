@@ -30,6 +30,7 @@ export default function MoiveListByCategory() {
       }
       setTotalPage(dataMovie.total_pages);
       setMovieList(dataMovie.results);
+      window.scrollTo(0, 0);
     })();
   }, [param.category, param.keyword]);
 

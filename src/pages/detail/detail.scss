@@ -102,14 +102,17 @@
       @include flex(unset , unset);
     }
     &-item{
+      color: $white;
       width: 90px;
       margin: 0 0.5rem 0 0;
       &-img{
         img{
           height: 160px;
           display: block;
-          border-radius: 5px;
+          border-radius: 10px;
           object-fit: cover;
+          transition : all .5s ease;
+          
           @include maxW($desktopWide){
             height: 120px;
           }
@@ -118,6 +121,15 @@
       &-actor{
         margin-top: 0.5rem;
         font-size: 0.8rem;
+        transition : all .5s ease;
+        
+      }
+      &:hover &-img img{
+        transform: scale(1.1);
+      }
+      &:hover &-actor{
+        transform: translateY(.5rem);
+        color: $red;
       }
     }
   }
