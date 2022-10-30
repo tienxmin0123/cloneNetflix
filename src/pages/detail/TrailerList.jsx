@@ -8,10 +8,13 @@ export default function TrailerList(props) {
   const [height, setHeight] = useState("");
   const videoRef = useRef(null);
   useEffect(() => {
-    if (videoRef.current !== null) {
-      const clientHeght = (videoRef.current.offsetWidth * 9) / 16 + "px";
-      setHeight(clientHeght);
-    }
+    const clearTimeout = setTimeout(() => {
+      if (videoRef.current !== null) {
+        const clientHeght = (videoRef.current.offsetWidth * 9) / 16 + "px";
+        setHeight(clientHeght);
+      }
+    }, 500);
+    return () => clearTimeout;
   }, []);
   useEffect(() => {
     (async () => {
@@ -43,7 +46,7 @@ export default function TrailerList(props) {
                 src={apiConfig.videoTrailer(movie.key)}
                 ref={videoRef}
                 width="100%"
-                height={height > 0 ? height : "750px"}
+                height={height.length > 0 ? height : "600px"}
                 title="video"
               ></iframe>
             </div>

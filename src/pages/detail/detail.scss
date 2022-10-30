@@ -11,10 +11,28 @@
   &__wrap{
     @include flex(center , center);
     transform: translateY(-150px);
+    @include maxW($desktopSupperWide){
+      transform: translateY(-100px);
+    }
+    @include maxW($mobile){
+      align-items: unset;
+      justify-content: unset;
+      transform: translateY(-50px);
+      width: 100%;
+    }
+    @include maxW($mobileLandScape){
+      transform: translateY(0px);
+    }
   }
   &__thumbnail{
     width: 30%;
     height: 550px;
+    @include maxW($desktopSupperWide){
+      height: 400px;
+    }
+    @include maxW($mobile){
+      display: none;
+    }
     img{
       border-radius: 2rem;
       width: 100%;
@@ -27,24 +45,52 @@
     padding-left: 2rem;
     width: calc(100% - 30% );
     color: $white;
+    @include maxW($mobile){
+      width: 100%;
+      padding-left:0;
+    }
   }
   &__title{
     font-size: 4rem;
     font-weight: 600;
+    @include maxW($desktopSupperWide){
+      font-size: 2.5rem;
+    }
+    @include maxW($desktopWide){
+      font-size: 2rem;
+    }
+    @include maxW($mobile){
+      margin: 1rem 0 0 0;
+    }
   }
   &__genres{
+    margin: 1rem 0;
     display: inline-flex;
+    @include maxW($mobile){
+      margin: .5rem 0;
+    }
     &-item{
       padding: 0.5rem 1rem;
-      margin: 1rem 0.5rem 1rem 0;
+      margin: 0 0.5rem 0 0;
       border: 1px solid $white;
       border-radius: 25px;
+      @include maxW($desktopSupperWide){
+        margin: 1rem 0.5rem 0 0;
+      }
+      @include maxW($mobile){
+        padding: 0.5rem;
+        font-size: .6rem;
+      }
     }
   }
   &__desc{
     margin: 1rem 0;
     font-size: 1rem;
     line-height: 1.3;
+    @include maxW($mobile){
+      margin: 0;
+      font-size: .8rem;
+    }
   }
   &__cast{
     span{
@@ -52,10 +98,6 @@
       font-weight: 600;
     }
     &-list{
-      // display: grid;
-      // grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-      // grid-gap: 10px;
-      // gap: 10px;
       margin: 0.5rem 0;
       @include flex(unset , unset);
     }
@@ -68,6 +110,9 @@
           display: block;
           border-radius: 5px;
           object-fit: cover;
+          @include maxW($desktopWide){
+            height: 120px;
+          }
         }
       }
       &-actor{
@@ -79,6 +124,9 @@
   &__trailer{
     padding: 4rem;
     background-color: $black;
+    @include maxW($desktopSupperWide){
+      padding: 2rem;
+    }
     color: $white;
     &-title{
       font-size: 2rem;

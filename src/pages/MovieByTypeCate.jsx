@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
-import tmdbApi, { movieType, tvType } from "../api/defineTmdbApi";
+import { useParams } from "react-router-dom";
+import tmdbApi from "../api/defineTmdbApi";
 import MovieByCategory from "../components/movieByCate/MovieByCategory";
 import { CategoryHeader } from "./MoiveListByCategory";
 

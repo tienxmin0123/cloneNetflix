@@ -34,28 +34,25 @@ export default function MoiveListByCategory() {
   }, [param.category, param.keyword]);
 
   const handleShowMoreMovie = async () => {
-    let response = null;
+    let dataMovie = null;
     if (param.keyword === undefined) {
       const params = {
         page: page + 1,
       };
-      switch (category) {
-        case category.movie:
-          response = await tmdbApi.getMoviesList(movieType.upcoming, {
-            params,
-          });
-          break;
-        default:
-          response = await tmdbApi.getTvList(tvType.popular, { params });
+      if (param.category === "movie") {
+        dataMovie = await tmdbApi.getMoviesList(movieType.upcoming, {
+          params,
+        });
+      } else {
+        dataMovie = await tmdbApi.getTvList(tvType.popular, { params });
       }
     } else {
       const params = {
-        page: page + 1,
         query: param.keyword,
       };
-      response = await tmdbApi.search(param.category, { params });
+      dataMovie = await tmdbApi.search(param.category, { params });
     }
-    setMovieList([...movieList, ...response.results]);
+    setMovieList([...movieList, ...dataMovie.results]);
     setPage(page + 1);
   };
   return (

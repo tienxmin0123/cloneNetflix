@@ -4,7 +4,7 @@ export const category = {
   movie: "movie",
   tv: "tv",
 };
-
+export const person = "person";
 export const movieType = {
   upcoming: "upcoming",
   popular: "popular",
@@ -44,6 +44,10 @@ const tmdbApi = {
   },
   similar: (cate, id) => {
     const url = category[cate] + "/" + id + "/similar";
+    return axiosClient.get(url, { params: {} });
+  },
+  getActor: (person, id) => {
+    const url = person + "/" + id + "/movie_credits";
     return axiosClient.get(url, { params: {} });
   },
 };

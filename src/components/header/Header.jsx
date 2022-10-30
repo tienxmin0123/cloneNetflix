@@ -39,32 +39,28 @@ export default function Header() {
   }, []);
   return (
     <header ref={headerRef} className="header">
-      <div className="container">
-        <div className="header__wrap">
-          <div className="header__logo">
+      <div className="header__wrap">
+        <div className="header__logo">
+          <Link
+            to={{
+              pathname: "/",
+            }}
+          >
+            <img src={logoHeader} alt="logo" />
+          </Link>
+        </div>
+        <div className="header__nav">
+          {headerNav.map((item, idx) => (
             <Link
+              className={`header__links ${indexLinks === idx ? "active" : ""}`}
               to={{
-                pathname: "/",
+                pathname: item.path,
               }}
+              key={idx}
             >
-              <img src={logoHeader} alt="logo" />
+              {item.display}
             </Link>
-          </div>
-          <div className="header__nav">
-            {headerNav.map((item, idx) => (
-              <Link
-                className={`header__links ${
-                  indexLinks === idx ? "active" : ""
-                }`}
-                to={{
-                  pathname: item.path,
-                }}
-                key={idx}
-              >
-                {item.display}
-              </Link>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </header>

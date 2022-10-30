@@ -2,22 +2,41 @@
 .card{
   position: relative;
   height: 100%;
-  margin: 1rem 0;
   transition: all .5s ease;
+  &__content {
+    @include flex(unset , unset);
+    flex-direction: column;
+  }
   &__thumbnail{
+    height: 350px;
+    width: 100%;
+    @include maxW($desktopSupperWide){
+      height: 250px;
+    }
+    @include maxW($mobile){
+      height: 200px;
+    }
+    flex-shrink: 0;
     img{
       display: block;
-      border-radius: 20px;
       height: 100%;
+      width: 100%;
+      border-radius: 20px;
       object-fit: cover;
     }
   }
   &__title{
     color: $white;
     font-size: 1.2rem;
-    margin: 0.5rem 0;
+    margin: 1rem 0 0 0;
     text-align: center;
     transition: all .5s ease;
+    @include maxW($desktopSupperWide){
+      font-size: 1rem;
+    }
+    @include maxW($mobile){
+      font-size: .8rem;
+    }
   }
   &__btn{
     position: absolute;

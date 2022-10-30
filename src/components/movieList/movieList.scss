@@ -8,11 +8,20 @@
   &__top{
     @include flex(center, space-between);
     margin: 0 0 1rem 0;
+    @include maxW($desktopSupperWide){
+      margin: 0 0 .5rem 0;
+    }
   }
   &__name{
     margin: 0 0 1rem 0 ;
     font-size: 2rem;
     color: $white;
+    @include maxW($desktopSupperWide){
+      font-size: 1.4rem;
+    }
+    @include maxW($mobile){
+      font-size: 1rem;
+    }
   }
   &__btn{
     color : $white;
@@ -20,6 +29,9 @@
     border: 1px solid $white;
     border-radius: 20px;
     transition: all .5s ease;
+    @include maxW($desktopSupperWide){
+      font-size: .8rem;
+    }
     &:hover{
       background: $white;
       color: $red;

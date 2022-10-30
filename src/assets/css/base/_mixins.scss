@@ -3,3 +3,18 @@
   align-items: $aligin-item;
   justify-content: $justify-content;
 }
+@mixin  maxW($breakPoint) {
+  @media screen and (max-width: $breakPoint){
+      @content; 
+  }
+};
+@mixin  minW($breakPoint) {
+  @media screen and (min-width: $breakPoint){
+      @content; 
+  }
+};
+@mixin  minToMax($min , $max) {
+  @media (min-width: $min) and (max-width: $max){
+      @content; 
+  }
+};

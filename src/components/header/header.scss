@@ -8,15 +8,15 @@
   right: 0;
   z-index: 100;
   transition: all .5s ease;
-  & > .container{
-    height: inherit;
-  }
   &.shrink{
     background: $black;
     height: $header-height-shrink;
   }
   &__wrap{
     height: 100%;
+    max-width: $containerWide;
+    margin: 0 auto ;
+    padding: 0 2rem;
     @include flex(center, space-between);
   }
   &__logo{
@@ -35,7 +35,7 @@
     padding: 8px 12px;
     transition: all .05s ease;
     color: $white;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     &::after{
       content: '';
@@ -55,6 +55,38 @@
     &.active::after,
     &:hover::after{
       width: 80%;
+    }
+  }
+}
+@include maxW($desktopWide){
+  .header{
+    &__links{
+      font-size: 1.2rem;
+    }
+  }
+}
+@include maxW($mobile){
+  .header{
+    height: $header-height-shrink;
+    &.shrink{
+      height: 3rem;
+    }
+    &__wrap{
+      justify-content: center;
+    }
+    &__logo{
+      height: 4rem;
+    }
+    &__nav{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: $black;
+      z-index: 10;
+      padding: .5rem 0;
+    }
+    &__links{
+      font-size: 1rem;
     }
   }
 }
