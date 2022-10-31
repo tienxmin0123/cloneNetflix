@@ -21,6 +21,7 @@
     flex-wrap: wrap;
   }
   & .card{
+    height: auto;
     width: calc((100% / 5) - 15px);
     margin: 0 0 1rem 0;
   }

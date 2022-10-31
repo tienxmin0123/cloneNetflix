@@ -10,6 +10,7 @@ import TrailerList from "./TrailerList";
 export default function DetailMovie() {
   const { category, id } = useParams();
   const [video, setVideo] = useState(null);
+  console.log(video);
   useEffect(() => {
     (async () => {
       const videoDetail = await tmdbApi.detail(category, id, { params: {} });
@@ -42,7 +43,10 @@ export default function DetailMovie() {
                 </div>
                 <div className="detail-movie__info">
                   <h2 className="detail-movie__title">
-                    {video.title || video.original_title}
+                    {video.title ||
+                      video.original_title ||
+                      video.original_name ||
+                      video.name}
                   </h2>
                   <div className="detail-movie__genres">
                     {video.genres.map((x) => (
