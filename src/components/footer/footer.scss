@@ -27,11 +27,16 @@
   }
   &__wrap{
     @include flex(center , center);
+    @include maxW($desktopSupperWide){
+      justify-content: space-between;
+    }
+    
   }
   &__link{
     width: calc((100% / 4) - 40px);
     @include flex(unset , unset);
     flex-direction: column;
+    width: calc((100% / 4) - 10px);
     &-item{
       font-size: 1.5rem;
       text-transform: capitalize;
