@@ -15,20 +15,22 @@ export default function CastsList(props) {
   return (
     <>
       {castList.map((item) => (
-        <Link to={`/actor/${item.credit_id}`} key={item.id}>
-          <div className="detail-movie__cast-item">
-            <div className="detail-movie__cast-item-img">
-              <img
-                src={
-                  item.profile_path !== null
-                    ? apiConfig.w500Image(item.profile_path)
-                    : "https://via.placeholder.com/90x160"
-                }
-                alt={item.name}
-              />
-            </div>
-            <div className="detail-movie__cast-item-actor">{item.name}</div>
+        <Link
+          to={`/actor/${item.credit_id}`}
+          key={item.id}
+          className="detail-movie__cast-item"
+        >
+          <div className="detail-movie__cast-item-img">
+            <img
+              src={
+                item.profile_path !== null
+                  ? apiConfig.w500Image(item.profile_path)
+                  : "https://via.placeholder.com/90x160"
+              }
+              alt={item.name}
+            />
           </div>
+          <div className="detail-movie__cast-item-actor">{item.name}</div>
         </Link>
       ))}
     </>
