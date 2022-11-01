@@ -31,7 +31,7 @@ export default function SearchMovie(props) {
         type="text"
         value={keyword}
         className="category__search-input"
-        placeholder="Please Enter Keywords"
+        placeholder="Find movies"
         onChange={(e) => setKeyword(e.target.value)}
       />
       <span onClick={() => pushWord()}>search</span>

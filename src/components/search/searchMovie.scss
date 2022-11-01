@@ -12,6 +12,10 @@
       padding: .5rem 8rem .5rem 1.5rem;
       outline: 0;
       border: 0;
+      @include maxW($mobile){
+        font-size: .8rem;
+        padding: .5rem 4rem .5rem 1rem;
+      }
     }
     span{
       position: absolute;
@@ -25,6 +29,10 @@
       border-radius: 30px;
       box-shadow: 0px 0px 2px 4px $red;
       transition: all .5s ease;
+      @include maxW($mobile){
+        font-size: .8rem;
+        padding: .25rem 1rem;
+      }
       &:hover{
       box-shadow: 0px 0px 3px 7px $red;
       }
