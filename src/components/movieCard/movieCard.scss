@@ -68,6 +68,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     opacity: 0;
     transition: all .5s ease;
     z-index: 10;
@@ -78,6 +79,7 @@
     }
   }
   &:hover &__thumbnail img{
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
   &:hover &__title{
